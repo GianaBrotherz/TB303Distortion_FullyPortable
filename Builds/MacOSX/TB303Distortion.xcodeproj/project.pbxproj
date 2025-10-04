@@ -1,0 +1,2539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		6D1959B370693DA0828066A6 /* TB303Distortion - All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 44405404E0E195D5431F0706;
+			buildPhases = (
+			);
+			dependencies = (
+				8756BBE99EB2B8BF44760D73,
+				C157034FD1D912F5950CCA46,
+				161BCB6A6E5897CB3F095D11,
+				C1BE16F7377F2C584474FE8B,
+				8AAA12C4E12851BB306B0730,
+				59BC7384B8A250736D82F5FE,
+			);
+			name = "TB303Distortion - All";
+			productName = TB303Distortion;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		007B39C8076E687CAE721B3C /* AudioUnit.framework */ = {isa = PBXBuildFile; fileRef = 07CFBFAC68C5FE23D4B8ECA1; };
+		0150360B12BB8E5759D2CE95 /* Shared Code */ = {isa = PBXBuildFile; fileRef = 6B70D7FEF2764D998907CF75; };
+		0A297ABE017BAEF7FF29715F /* include_juce_audio_plugin_client_VST3.mm */ = {isa = PBXBuildFile; fileRef = FBC8B0A1CA6FF927A1B106B8; };
+		0CCD31148F1D31EE80BE0702 /* Security.framework */ = {isa = PBXBuildFile; fileRef = 58383C94F7005C333A1EC71B; };
+		10CBB48AF2DA0AB9324B4065 /* WebKit.framework */ = {isa = PBXBuildFile; fileRef = 5C4A6F3C2935AC9C3235F6DF; };
+		18DE42E1DA2D7C3B19D94631 /* include_juce_gui_extra.mm */ = {isa = PBXBuildFile; fileRef = A5E477D7EBDA7351695747A9; };
+		2183D1E358BA07CF9B9A257D /* include_juce_audio_plugin_client_AAX.mm */ = {isa = PBXBuildFile; fileRef = 20F7DC9E00A9293FEAC0EE06; };
+		242043E4A16B08726CADC5E7 /* include_juce_audio_processors_lv2_libs.cpp */ = {isa = PBXBuildFile; fileRef = 0355F303F4F3FEE1A5FF2DE5; };
+		252BB1B6490900AF170AC110 /* Standalone Plugin */ = {isa = PBXBuildFile; fileRef = ABB122930D649406B9C1B62A; };
+		295D55A182226E624D0A17C9 /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXBuildFile; fileRef = A1830F5EF26D2EEF4EEC177B; };
+		31DC7BE80C9D728E69086E6A /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = 7F60CFDA0C5B3BC45A5AF974; };
+		36BD97A7ECF4B22DA02B2CB2 /* include_juce_audio_formats.mm */ = {isa = PBXBuildFile; fileRef = 1411969ABE500CE3693ECCC0; };
+		49283F7E7B636836459DFEF8 /* include_juce_audio_plugin_client_ARA.cpp */ = {isa = PBXBuildFile; fileRef = 6F42FC0F57A91DB8B90C2EFF; };
+		4B647F0336BAE637FF70F652 /* AAX */ = {isa = PBXBuildFile; fileRef = 799B000FF14067D78D18C121; };
+		5C171D67EA4D00DF231AD710 /* MetalKit.framework */ = {isa = PBXBuildFile; fileRef = E047C975BF98D1507DCD4442; settings = { ATTRIBUTES = (Weak, ); }; };
+		5C6DE51369E259D866FCBF0C /* include_juce_audio_basics.mm */ = {isa = PBXBuildFile; fileRef = F3104A35824B483F23332183; };
+		604D901995A89BBDDCE96367 /* BinaryData.cpp */ = {isa = PBXBuildFile; fileRef = B1A178F872B0AE297292097F; };
+		6ECD8EA6BFE05EF0DEDD8F21 /* include_juce_data_structures.mm */ = {isa = PBXBuildFile; fileRef = 6FD04E49F2FD57A080D317D9; };
+		729F48BE07267B2979E6B044 /* PluginProcessor.cpp */ = {isa = PBXBuildFile; fileRef = 23EB6C0C1D87FCD6E45CA981; };
+		747AF3D3687945F0A133046F /* AudioToolbox.framework */ = {isa = PBXBuildFile; fileRef = DEA2ADD328145632F1D1A5DB; };
+		78125C9B9F241D7C97343BD3 /* include_juce_audio_devices.mm */ = {isa = PBXBuildFile; fileRef = F82C54FF41CC249FFB35BAD2; };
+		78A7A90E4DFC7537375A6547 /* AU */ = {isa = PBXBuildFile; fileRef = FD96C0B90D49BDCCDAD2C0FC; };
+		832AC3AF34B077FA585291CD /* Cocoa.framework */ = {isa = PBXBuildFile; fileRef = 9574856F8F6EE4117EE2B090; };
+		8C550B79DFFCAA10E303D224 /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = 6C5958D01A9233D7693477B3; };
+		978889274123DD0F3596B509 /* IOKit.framework */ = {isa = PBXBuildFile; fileRef = 8865E8A0A423AFD055563328; };
+		97B47A1FCFA09F4E2D6399D3 /* include_juce_graphics_Sheenbidi.c */ = {isa = PBXBuildFile; fileRef = E65B8E24D6B054A16E9F4F3E; };
+		A86EF71BC538D25F5B3C5FB3 /* include_juce_core_CompilationTime.cpp */ = {isa = PBXBuildFile; fileRef = 51EF06058F600640F5D6EA11; };
+		ADBAC641D0B9F7EE85A0AFE3 /* RecentFilesMenuTemplate.nib */ = {isa = PBXBuildFile; fileRef = 1FD32AF595FE7C5A52652310; };
+		B1FD3BCFF1E70E0AE9EE2CAB /* include_juce_audio_plugin_client_AU_2.mm */ = {isa = PBXBuildFile; fileRef = 1A8B45A51B1C3EB92272CED4; };
+		B331C9C1958161D284D8CE6F /* Foundation.framework */ = {isa = PBXBuildFile; fileRef = 52D6E7DD916AD1E2DA8BF51F; };
+		BDCCCCCBE9B328F114AD5701 /* include_juce_audio_plugin_client_AU_1.mm */ = {isa = PBXBuildFile; fileRef = 45DE5DD127137C9A60EA3A6E; };
+		BDDE4CBE038BE235F9E9540B /* DiscRecording.framework */ = {isa = PBXBuildFile; fileRef = DEC16B46EF032DC6038DA140; };
+		C0AF0964AC7546BF55D9D40A /* QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = A17B93B4F953FE0DF6227080; };
+		C9E0E22018236B0ED6BC8A12 /* CoreAudio.framework */ = {isa = PBXBuildFile; fileRef = 04FA2F93F3A6718E6C1A7336; };
+		CD2BA803CD405585B51B634E /* Metal.framework */ = {isa = PBXBuildFile; fileRef = C6F1D01A0D36F1B817EFAB58; settings = { ATTRIBUTES = (Weak, ); }; };
+		D2EE1FABFED392F117D34074 /* VST3 */ = {isa = PBXBuildFile; fileRef = A030BE1CF8EDB4EAFD47A293; };
+		DAE2F0828F59A63F6EE3570E /* include_juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = 1922D03CEF69E1A2116DFF08; };
+		DC426DE368AB7D13266AA9D9 /* include_juce_audio_processors_ara.cpp */ = {isa = PBXBuildFile; fileRef = 64D960209A17C7973A911771; };
+		DD5428B6ECC6F3682C0EADCE /* CoreAudioKit.framework */ = {isa = PBXBuildFile; fileRef = B0234A3B192B012078B68850; };
+		E03A8D8B250049A0E497C39E /* include_juce_audio_utils.mm */ = {isa = PBXBuildFile; fileRef = EB835697CE76565AF3CAC3E2; };
+		E55E1E8F0F7AF84C10D2444B /* include_juce_audio_processors.mm */ = {isa = PBXBuildFile; fileRef = 4BC5BBF21A99AB7D98D88C4A; };
+		E5A65AD58AA457B049DF9FB3 /* include_juce_graphics_Harfbuzz.cpp */ = {isa = PBXBuildFile; fileRef = 73D9579F73D5B7A457100A88; };
+		E70E081507AAE57154140DD5 /* juce_VST3ManifestHelper.mm */ = {isa = PBXBuildFile; fileRef = 464AEE102E3B37439D1F382C; settings = { COMPILER_FLAGS = "-w -DJUCE_SKIP_PRECOMPILED_HEADER"; }; };
+		EA2D8007243908D050C69957 /* PluginEditor.cpp */ = {isa = PBXBuildFile; fileRef = E652A5BF8AE04B85E64645DA; };
+		EB92A49DA3E99FC2AD1412EB /* include_juce_core.mm */ = {isa = PBXBuildFile; fileRef = B2E67D9018C1B9CCE4276622; };
+		EF483533D8115779EC2DFF14 /* include_juce_audio_plugin_client_AAX_utils.cpp */ = {isa = PBXBuildFile; fileRef = 3E72AB5A2EF63FD275D9E154; };
+		EFDDC1123E99617C926A1BD2 /* VST3 Manifest Helper */ = {isa = PBXBuildFile; fileRef = A87F31B1161B5B4A17C28D7F; };
+		F0338B64FDF543C303C32591 /* CoreMIDI.framework */ = {isa = PBXBuildFile; fileRef = FC534A8AC1358A8E9C755F5C; };
+		F30182812F6782197B6A291B /* Accelerate.framework */ = {isa = PBXBuildFile; fileRef = 0E2082C37D50CD5542255BEF; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0355F303F4F3FEE1A5FF2DE5 /* include_juce_audio_processors_lv2_libs.cpp */ /* include_juce_audio_processors_lv2_libs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_lv2_libs.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_lv2_libs.cpp; sourceTree = SOURCE_ROOT; };
+		04FA2F93F3A6718E6C1A7336 /* CoreAudio.framework */ /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		07CFBFAC68C5FE23D4B8ECA1 /* AudioUnit.framework */ /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		0B7FC50AFEECC99AA43EC162 /* juce_audio_devices */ /* juce_audio_devices */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_devices; path = ../../JuceLibraryCode/modules/juce_audio_devices; sourceTree = SOURCE_ROOT; };
+		0E2082C37D50CD5542255BEF /* Accelerate.framework */ /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		113D3516C1B583AC9526D0A8 /* PluginProcessor.h */ /* PluginProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginProcessor.h; path = ../../Source/PluginProcessor.h; sourceTree = SOURCE_ROOT; };
+		1411969ABE500CE3693ECCC0 /* include_juce_audio_formats.mm */ /* include_juce_audio_formats.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_formats.mm; path = ../../JuceLibraryCode/include_juce_audio_formats.mm; sourceTree = SOURCE_ROOT; };
+		14DA7135B4D28B7B301B04A9 /* Info-VST3_Manifest_Helper.plist */ /* Info-VST3_Manifest_Helper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3_Manifest_Helper.plist"; path = "Info-VST3_Manifest_Helper.plist"; sourceTree = SOURCE_ROOT; };
+		1922D03CEF69E1A2116DFF08 /* include_juce_graphics.mm */ /* include_juce_graphics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_graphics.mm; path = ../../JuceLibraryCode/include_juce_graphics.mm; sourceTree = SOURCE_ROOT; };
+		1A8B45A51B1C3EB92272CED4 /* include_juce_audio_plugin_client_AU_2.mm */ /* include_juce_audio_plugin_client_AU_2.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AU_2.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm; sourceTree = SOURCE_ROOT; };
+		1FD32AF595FE7C5A52652310 /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
+		1FF3A222787A15706FF8B181 /* Info-AU.plist */ /* Info-AU.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-AU.plist"; path = "Info-AU.plist"; sourceTree = SOURCE_ROOT; };
+		20F7DC9E00A9293FEAC0EE06 /* include_juce_audio_plugin_client_AAX.mm */ /* include_juce_audio_plugin_client_AAX.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AAX.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AAX.mm; sourceTree = SOURCE_ROOT; };
+		23EB6C0C1D87FCD6E45CA981 /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		2C7DFE2B039425BE25D887F6 /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
+		306EB06AF310B14BA1944353 /* Info-VST3.plist */ /* Info-VST3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3.plist"; path = "Info-VST3.plist"; sourceTree = SOURCE_ROOT; };
+		3B3D186E2B0F1F3B4AFB3B82 /* juce_audio_processors */ /* juce_audio_processors */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_processors; path = ../../JuceLibraryCode/modules/juce_audio_processors; sourceTree = SOURCE_ROOT; };
+		3E72AB5A2EF63FD275D9E154 /* include_juce_audio_plugin_client_AAX_utils.cpp */ /* include_juce_audio_plugin_client_AAX_utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_AAX_utils.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AAX_utils.cpp; sourceTree = SOURCE_ROOT; };
+		45DE5DD127137C9A60EA3A6E /* include_juce_audio_plugin_client_AU_1.mm */ /* include_juce_audio_plugin_client_AU_1.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_AU_1.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_AU_1.mm; sourceTree = SOURCE_ROOT; };
+		464AEE102E3B37439D1F382C /* juce_VST3ManifestHelper.mm */ /* juce_VST3ManifestHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_VST3ManifestHelper.mm; path = ../../JuceLibraryCode/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm; sourceTree = SOURCE_ROOT; };
+		48BF012DA0CDFAEB98984AEC /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = ../../JuceLibraryCode/modules/juce_core; sourceTree = SOURCE_ROOT; };
+		4BC5BBF21A99AB7D98D88C4A /* include_juce_audio_processors.mm */ /* include_juce_audio_processors.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_processors.mm; path = ../../JuceLibraryCode/include_juce_audio_processors.mm; sourceTree = SOURCE_ROOT; };
+		4BCFF76B09A60F880B0EF89F /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = ../../JuceLibraryCode/modules/juce_events; sourceTree = SOURCE_ROOT; };
+		51EF06058F600640F5D6EA11 /* include_juce_core_CompilationTime.cpp */ /* include_juce_core_CompilationTime.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_core_CompilationTime.cpp; path = ../../JuceLibraryCode/include_juce_core_CompilationTime.cpp; sourceTree = SOURCE_ROOT; };
+		52D6E7DD916AD1E2DA8BF51F /* Foundation.framework */ /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		58383C94F7005C333A1EC71B /* Security.framework */ /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5C4A6F3C2935AC9C3235F6DF /* WebKit.framework */ /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5D55BC1D48C9F527A2B3C516 /* Info-AAX.plist */ /* Info-AAX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-AAX.plist"; path = "Info-AAX.plist"; sourceTree = SOURCE_ROOT; };
+		64D960209A17C7973A911771 /* include_juce_audio_processors_ara.cpp */ /* include_juce_audio_processors_ara.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_ara.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_ara.cpp; sourceTree = SOURCE_ROOT; };
+		6B70D7FEF2764D998907CF75 /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTB303Distortion.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C5958D01A9233D7693477B3 /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
+		6F42FC0F57A91DB8B90C2EFF /* include_juce_audio_plugin_client_ARA.cpp */ /* include_juce_audio_plugin_client_ARA.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_ARA.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_ARA.cpp; sourceTree = SOURCE_ROOT; };
+		6FD04E49F2FD57A080D317D9 /* include_juce_data_structures.mm */ /* include_juce_data_structures.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_data_structures.mm; path = ../../JuceLibraryCode/include_juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
+		73D9579F73D5B7A457100A88 /* include_juce_graphics_Harfbuzz.cpp */ /* include_juce_graphics_Harfbuzz.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_graphics_Harfbuzz.cpp; path = ../../JuceLibraryCode/include_juce_graphics_Harfbuzz.cpp; sourceTree = SOURCE_ROOT; };
+		74308209732A2194D7D8994C /* Info-Standalone_Plugin.plist */ /* Info-Standalone_Plugin.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Standalone_Plugin.plist"; path = "Info-Standalone_Plugin.plist"; sourceTree = SOURCE_ROOT; };
+		799B000FF14067D78D18C121 /* AAX */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TB303Distortion.aaxplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F60CFDA0C5B3BC45A5AF974 /* include_juce_events.mm */ /* include_juce_events.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_events.mm; path = ../../JuceLibraryCode/include_juce_events.mm; sourceTree = SOURCE_ROOT; };
+		845AF6B45331C0CF4CCC4373 /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = ../../JuceLibraryCode/modules/juce_graphics; sourceTree = SOURCE_ROOT; };
+		886044B49F626902585F4446 /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = ../../JuceLibraryCode/modules/juce_gui_basics; sourceTree = SOURCE_ROOT; };
+		8865E8A0A423AFD055563328 /* IOKit.framework */ /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		9307C6AC706674BE0F13DE9B /* juce_audio_formats */ /* juce_audio_formats */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_formats; path = ../../JuceLibraryCode/modules/juce_audio_formats; sourceTree = SOURCE_ROOT; };
+		9574856F8F6EE4117EE2B090 /* Cocoa.framework */ /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		A030BE1CF8EDB4EAFD47A293 /* VST3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TB303Distortion.vst3; sourceTree = BUILT_PRODUCTS_DIR; };
+		A17B93B4F953FE0DF6227080 /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A1830F5EF26D2EEF4EEC177B /* include_juce_audio_plugin_client_Standalone.cpp */ /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_Standalone.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
+		A5E477D7EBDA7351695747A9 /* include_juce_gui_extra.mm */ /* include_juce_gui_extra.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_extra.mm; path = ../../JuceLibraryCode/include_juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
+		A87F31B1161B5B4A17C28D7F /* VST3 Manifest Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = juce_vst3_helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB122930D649406B9C1B62A /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TB303Distortion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA148ADB804EC5DBC484977 /* juce_gui_extra */ /* juce_gui_extra */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_extra; path = ../../JuceLibraryCode/modules/juce_gui_extra; sourceTree = SOURCE_ROOT; };
+		B0234A3B192B012078B68850 /* CoreAudioKit.framework */ /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		B0B0D286DFC1C58F95616C4D /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
+		B1A178F872B0AE297292097F /* BinaryData.cpp */ /* BinaryData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData.cpp; path = ../../JuceLibraryCode/BinaryData.cpp; sourceTree = SOURCE_ROOT; };
+		B2E67D9018C1B9CCE4276622 /* include_juce_core.mm */ /* include_juce_core.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_core.mm; path = ../../JuceLibraryCode/include_juce_core.mm; sourceTree = SOURCE_ROOT; };
+		BF9C8FEFE478F3FAEF402E1A /* juce_audio_utils */ /* juce_audio_utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_utils; path = ../../JuceLibraryCode/modules/juce_audio_utils; sourceTree = SOURCE_ROOT; };
+		C022445495EA7F69926C0A4F /* JucePluginDefines.h */ /* JucePluginDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JucePluginDefines.h; path = ../../JuceLibraryCode/JucePluginDefines.h; sourceTree = SOURCE_ROOT; };
+		C4BFDA6892329C5FA7AA1FF3 /* juce_audio_plugin_client */ /* juce_audio_plugin_client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_plugin_client; path = ../../JuceLibraryCode/modules/juce_audio_plugin_client; sourceTree = SOURCE_ROOT; };
+		C6F1D01A0D36F1B817EFAB58 /* Metal.framework */ /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		C7467BBF522BCD9227F75DD8 /* smiley_wet.png */ /* smiley_wet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smiley_wet.png; path = ../../Resources/smiley_wet.png; sourceTree = SOURCE_ROOT; };
+		D7478FF820881DC17678CFB6 /* smiley_dry.png */ /* smiley_dry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smiley_dry.png; path = ../../Resources/smiley_dry.png; sourceTree = SOURCE_ROOT; };
+		DEA2ADD328145632F1D1A5DB /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DEC16B46EF032DC6038DA140 /* DiscRecording.framework */ /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = System/Library/Frameworks/DiscRecording.framework; sourceTree = SDKROOT; };
+		E047C975BF98D1507DCD4442 /* MetalKit.framework */ /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		E4070D39759709321B787393 /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = ../../JuceLibraryCode/modules/juce_data_structures; sourceTree = SOURCE_ROOT; };
+		E652A5BF8AE04B85E64645DA /* PluginEditor.cpp */ /* PluginEditor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginEditor.cpp; path = ../../Source/PluginEditor.cpp; sourceTree = SOURCE_ROOT; };
+		E65B8E24D6B054A16E9F4F3E /* include_juce_graphics_Sheenbidi.c */ /* include_juce_graphics_Sheenbidi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = include_juce_graphics_Sheenbidi.c; path = ../../JuceLibraryCode/include_juce_graphics_Sheenbidi.c; sourceTree = SOURCE_ROOT; };
+		EB835697CE76565AF3CAC3E2 /* include_juce_audio_utils.mm */ /* include_juce_audio_utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_utils.mm; path = ../../JuceLibraryCode/include_juce_audio_utils.mm; sourceTree = SOURCE_ROOT; };
+		EC7E2720E872DDE462313B14 /* juce_audio_basics */ /* juce_audio_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_basics; path = ../../JuceLibraryCode/modules/juce_audio_basics; sourceTree = SOURCE_ROOT; };
+		F3104A35824B483F23332183 /* include_juce_audio_basics.mm */ /* include_juce_audio_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_basics.mm; path = ../../JuceLibraryCode/include_juce_audio_basics.mm; sourceTree = SOURCE_ROOT; };
+		F82C54FF41CC249FFB35BAD2 /* include_juce_audio_devices.mm */ /* include_juce_audio_devices.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_devices.mm; path = ../../JuceLibraryCode/include_juce_audio_devices.mm; sourceTree = SOURCE_ROOT; };
+		F9DFB19977CDC349490E0240 /* smiley_mega_sprite_sheet.png */ /* smiley_mega_sprite_sheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smiley_mega_sprite_sheet.png; path = ../../Resources/smiley_mega_sprite_sheet.png; sourceTree = SOURCE_ROOT; };
+		FB289F6EC13B5634BC63BB91 /* PluginEditor.h */ /* PluginEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginEditor.h; path = ../../Source/PluginEditor.h; sourceTree = SOURCE_ROOT; };
+		FBC8B0A1CA6FF927A1B106B8 /* include_juce_audio_plugin_client_VST3.mm */ /* include_juce_audio_plugin_client_VST3.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_plugin_client_VST3.mm; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.mm; sourceTree = SOURCE_ROOT; };
+		FC534A8AC1358A8E9C755F5C /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		FD96C0B90D49BDCCDAD2C0FC /* AU */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TB303Distortion.component; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0865EA955CC4C7F836183866 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30182812F6782197B6A291B,
+				747AF3D3687945F0A133046F,
+				832AC3AF34B077FA585291CD,
+				C9E0E22018236B0ED6BC8A12,
+				DD5428B6ECC6F3682C0EADCE,
+				F0338B64FDF543C303C32591,
+				BDDE4CBE038BE235F9E9540B,
+				B331C9C1958161D284D8CE6F,
+				978889274123DD0F3596B509,
+				C0AF0964AC7546BF55D9D40A,
+				0CCD31148F1D31EE80BE0702,
+				10CBB48AF2DA0AB9324B4065,
+				CD2BA803CD405585B51B634E,
+				5C171D67EA4D00DF231AD710,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F4E4EB3988ADA219D39FCD2 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				007B39C8076E687CAE721B3C,
+				F30182812F6782197B6A291B,
+				747AF3D3687945F0A133046F,
+				832AC3AF34B077FA585291CD,
+				C9E0E22018236B0ED6BC8A12,
+				DD5428B6ECC6F3682C0EADCE,
+				F0338B64FDF543C303C32591,
+				BDDE4CBE038BE235F9E9540B,
+				B331C9C1958161D284D8CE6F,
+				978889274123DD0F3596B509,
+				C0AF0964AC7546BF55D9D40A,
+				0CCD31148F1D31EE80BE0702,
+				10CBB48AF2DA0AB9324B4065,
+				CD2BA803CD405585B51B634E,
+				5C171D67EA4D00DF231AD710,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E4D6AF8A983861A30C1424D = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30182812F6782197B6A291B,
+				747AF3D3687945F0A133046F,
+				832AC3AF34B077FA585291CD,
+				C9E0E22018236B0ED6BC8A12,
+				DD5428B6ECC6F3682C0EADCE,
+				F0338B64FDF543C303C32591,
+				BDDE4CBE038BE235F9E9540B,
+				B331C9C1958161D284D8CE6F,
+				978889274123DD0F3596B509,
+				C0AF0964AC7546BF55D9D40A,
+				0CCD31148F1D31EE80BE0702,
+				10CBB48AF2DA0AB9324B4065,
+				CD2BA803CD405585B51B634E,
+				5C171D67EA4D00DF231AD710,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD22147B28667C0A37F5432F = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30182812F6782197B6A291B,
+				747AF3D3687945F0A133046F,
+				832AC3AF34B077FA585291CD,
+				C9E0E22018236B0ED6BC8A12,
+				DD5428B6ECC6F3682C0EADCE,
+				F0338B64FDF543C303C32591,
+				BDDE4CBE038BE235F9E9540B,
+				B331C9C1958161D284D8CE6F,
+				978889274123DD0F3596B509,
+				C0AF0964AC7546BF55D9D40A,
+				0CCD31148F1D31EE80BE0702,
+				10CBB48AF2DA0AB9324B4065,
+				CD2BA803CD405585B51B634E,
+				5C171D67EA4D00DF231AD710,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F526AC539B52171BBC826C71 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30182812F6782197B6A291B,
+				747AF3D3687945F0A133046F,
+				832AC3AF34B077FA585291CD,
+				C9E0E22018236B0ED6BC8A12,
+				DD5428B6ECC6F3682C0EADCE,
+				F0338B64FDF543C303C32591,
+				BDDE4CBE038BE235F9E9540B,
+				B331C9C1958161D284D8CE6F,
+				978889274123DD0F3596B509,
+				C0AF0964AC7546BF55D9D40A,
+				0CCD31148F1D31EE80BE0702,
+				10CBB48AF2DA0AB9324B4065,
+				CD2BA803CD405585B51B634E,
+				5C171D67EA4D00DF231AD710,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		224ACD9D2DB4B1E74291023F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				306EB06AF310B14BA1944353,
+				5D55BC1D48C9F527A2B3C516,
+				1FF3A222787A15706FF8B181,
+				74308209732A2194D7D8994C,
+				14DA7135B4D28B7B301B04A9,
+				1FD32AF595FE7C5A52652310,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2D5B388B2284EE48CB02392C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				23EB6C0C1D87FCD6E45CA981,
+				113D3516C1B583AC9526D0A8,
+				E652A5BF8AE04B85E64645DA,
+				FB289F6EC13B5634BC63BB91,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		3DAB7F7DB9E8E25CC1C9FD57 /* JUCE Library Code */ = {
+			isa = PBXGroup;
+			children = (
+				B1A178F872B0AE297292097F,
+				2C7DFE2B039425BE25D887F6,
+				F3104A35824B483F23332183,
+				F82C54FF41CC249FFB35BAD2,
+				1411969ABE500CE3693ECCC0,
+				20F7DC9E00A9293FEAC0EE06,
+				3E72AB5A2EF63FD275D9E154,
+				6F42FC0F57A91DB8B90C2EFF,
+				45DE5DD127137C9A60EA3A6E,
+				1A8B45A51B1C3EB92272CED4,
+				A1830F5EF26D2EEF4EEC177B,
+				FBC8B0A1CA6FF927A1B106B8,
+				4BC5BBF21A99AB7D98D88C4A,
+				64D960209A17C7973A911771,
+				0355F303F4F3FEE1A5FF2DE5,
+				EB835697CE76565AF3CAC3E2,
+				B2E67D9018C1B9CCE4276622,
+				51EF06058F600640F5D6EA11,
+				6FD04E49F2FD57A080D317D9,
+				7F60CFDA0C5B3BC45A5AF974,
+				1922D03CEF69E1A2116DFF08,
+				73D9579F73D5B7A457100A88,
+				E65B8E24D6B054A16E9F4F3E,
+				6C5958D01A9233D7693477B3,
+				A5E477D7EBDA7351695747A9,
+				B0B0D286DFC1C58F95616C4D,
+				C022445495EA7F69926C0A4F,
+			);
+			name = "JUCE Library Code";
+			sourceTree = "<group>";
+		};
+		5041F795C1E5B7F2FD53304E /* TB303Distortion */ = {
+			isa = PBXGroup;
+			children = (
+				2D5B388B2284EE48CB02392C,
+				CE2BEFEF619588771983FF5D,
+			);
+			name = TB303Distortion;
+			sourceTree = "<group>";
+		};
+		668203172B5FFAA022DDF3AC /* JUCE Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EC7E2720E872DDE462313B14,
+				0B7FC50AFEECC99AA43EC162,
+				9307C6AC706674BE0F13DE9B,
+				C4BFDA6892329C5FA7AA1FF3,
+				3B3D186E2B0F1F3B4AFB3B82,
+				BF9C8FEFE478F3FAEF402E1A,
+				48BF012DA0CDFAEB98984AEC,
+				E4070D39759709321B787393,
+				4BCFF76B09A60F880B0EF89F,
+				845AF6B45331C0CF4CCC4373,
+				886044B49F626902585F4446,
+				AFA148ADB804EC5DBC484977,
+			);
+			name = "JUCE Modules";
+			sourceTree = "<group>";
+		};
+		8BF721CE4B64E0F0C30A562F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A030BE1CF8EDB4EAFD47A293,
+				799B000FF14067D78D18C121,
+				FD96C0B90D49BDCCDAD2C0FC,
+				ABB122930D649406B9C1B62A,
+				6B70D7FEF2764D998907CF75,
+				A87F31B1161B5B4A17C28D7F,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE2BEFEF619588771983FF5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9DFB19977CDC349490E0240,
+				D7478FF820881DC17678CFB6,
+				C7467BBF522BCD9227F75DD8,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E75555898C57E1B8E71FED9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07CFBFAC68C5FE23D4B8ECA1,
+				0E2082C37D50CD5542255BEF,
+				DEA2ADD328145632F1D1A5DB,
+				9574856F8F6EE4117EE2B090,
+				04FA2F93F3A6718E6C1A7336,
+				B0234A3B192B012078B68850,
+				FC534A8AC1358A8E9C755F5C,
+				DEC16B46EF032DC6038DA140,
+				52D6E7DD916AD1E2DA8BF51F,
+				8865E8A0A423AFD055563328,
+				A17B93B4F953FE0DF6227080,
+				58383C94F7005C333A1EC71B,
+				5C4A6F3C2935AC9C3235F6DF,
+				C6F1D01A0D36F1B817EFAB58,
+				E047C975BF98D1507DCD4442,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F64CEB49617BC5517597EB13 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5041F795C1E5B7F2FD53304E,
+				668203172B5FFAA022DDF3AC,
+				3DAB7F7DB9E8E25CC1C9FD57,
+				224ACD9D2DB4B1E74291023F,
+				E75555898C57E1B8E71FED9B,
+				8BF721CE4B64E0F0C30A562F,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14DAC6A601135726AB003F59 /* TB303Distortion - VST3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9299B6A1058600482F4E115B;
+			buildPhases = (
+				6D66F86EEA28A717F0744C21,
+				30E5D6B0DD284548CFE96948,
+				9E4D6AF8A983861A30C1424D,
+				04A0AE700615C86719D1BA0A,
+				91EF5ADA9652253A8A92A0D7,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E1256327D0A68296F8F9136,
+				D4BFCF3982E70BA611D2E71A,
+			);
+			name = "TB303Distortion - VST3";
+			productName = TB303Distortion;
+			productReference = A030BE1CF8EDB4EAFD47A293;
+			productType = "com.apple.product-type.bundle";
+		};
+		7C9F84A70F17A65F969C2FA6 /* TB303Distortion - AAX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40388309ED8EE86A5D1DA1C6;
+			buildPhases = (
+				FDF94B7CFB9BE019634F12E9,
+				9AF38007EC23DB313CF8D0E7,
+				BD22147B28667C0A37F5432F,
+				BDF8D270026D8D094D7F38F4,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABA75438B7C5B7C4E1C6C55B,
+			);
+			name = "TB303Distortion - AAX";
+			productName = TB303Distortion;
+			productReference = 799B000FF14067D78D18C121;
+			productType = "com.apple.product-type.bundle";
+		};
+		9F45C3AD2FCD5102449BD7C4 /* TB303Distortion - VST3 Manifest Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A93FDDBBDD52FC052AC4B3AF;
+			buildPhases = (
+				3D9DEA1A5717C339C44169FE,
+				F526AC539B52171BBC826C71,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TB303Distortion - VST3 Manifest Helper";
+			productName = TB303Distortion;
+			productReference = A87F31B1161B5B4A17C28D7F;
+			productType = "com.apple.product-type.tool";
+		};
+		D07387405BD9F6FF805337BD /* TB303Distortion - Shared Code */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6331390E10826D5DA4B6B7CE;
+			buildPhases = (
+				28FE55AA5ED2C7EAD017143D,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TB303Distortion - Shared Code";
+			productName = TB303Distortion;
+			productReference = 6B70D7FEF2764D998907CF75;
+			productType = "com.apple.product-type.library.static";
+		};
+		EC8FEF1E7D7B7AF9672A388D /* TB303Distortion - Standalone Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30071ECB88A647346119DEF3;
+			buildPhases = (
+				C3016DA065569BF1F03DF0BD,
+				DED39C84BD3105D67C974E99,
+				0865EA955CC4C7F836183866,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A95E5FDA9C6E8277A75FE14,
+			);
+			name = "TB303Distortion - Standalone Plugin";
+			productName = TB303Distortion;
+			productReference = ABB122930D649406B9C1B62A;
+			productType = "com.apple.product-type.application";
+		};
+		F617F20A2456DC84FFCB0E84 /* TB303Distortion - AU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3822CDA4D49DC431E580ED5A;
+			buildPhases = (
+				CCE953F783F3266AB9BB862B,
+				2FB216E804DF6F7479233875,
+				8F4E4EB3988ADA219D39FCD2,
+				3E119954954E170C60485AFF,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				654320DBD18A1128E9B9D0D9,
+			);
+			name = "TB303Distortion - AU";
+			productName = TB303Distortion;
+			productReference = FD96C0B90D49BDCCDAD2C0FC;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17BA55C4A17CB2E6EA8B2342 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1340;
+				ORGANIZATIONNAME = "GianaBrotherz";
+				TargetAttributes = {
+					14DAC6A601135726AB003F59 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					6D1959B370693DA0828066A6 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					7C9F84A70F17A65F969C2FA6 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					9F45C3AD2FCD5102449BD7C4 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					D07387405BD9F6FF805337BD = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					EC8FEF1E7D7B7AF9672A388D = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					F617F20A2456DC84FFCB0E84 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 442CA1313444E1591346FA42;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F64CEB49617BC5517597EB13;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D1959B370693DA0828066A6,
+				14DAC6A601135726AB003F59,
+				7C9F84A70F17A65F969C2FA6,
+				F617F20A2456DC84FFCB0E84,
+				EC8FEF1E7D7B7AF9672A388D,
+				D07387405BD9F6FF805337BD,
+				9F45C3AD2FCD5102449BD7C4,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D66F86EEA28A717F0744C21 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBAC641D0B9F7EE85A0AFE3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3016DA065569BF1F03DF0BD = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBAC641D0B9F7EE85A0AFE3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCE953F783F3266AB9BB862B = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBAC641D0B9F7EE85A0AFE3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDF94B7CFB9BE019634F12E9 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADBAC641D0B9F7EE85A0AFE3,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A0AE700615C86719D1BA0A /* Update manifest */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Update manifest";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\necho Running \\\"${CONFIGURATION_BUILD_DIR}/juce_vst3_helper\\\" \\> \\\"${CONFIGURATION_BUILD_DIR}/${WRAPPER_NAME}/Contents/Resources/moduleinfo.json\\\"\n\"${CONFIGURATION_BUILD_DIR}/juce_vst3_helper\" > \"${CONFIGURATION_BUILD_DIR}/${WRAPPER_NAME}/Contents/Resources/moduleinfo.json\"\n";
+		};
+		3E119954954E170C60485AFF /* Plugin Copy Step */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Plugin Copy Step";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/Components//$(basename \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/Components//${WRAPPER_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/Components//${WRAPPER_NAME}\"\n  fi\nfi\n\nif [[ \"${CONFIGURATION}\" == \"Release\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/Components//$(basename \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/Components//${WRAPPER_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/Components//${WRAPPER_NAME}\"\n  fi\nfi\n";
+		};
+		91EF5ADA9652253A8A92A0D7 /* Plugin Copy Step */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Plugin Copy Step";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/VST3//$(basename \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/VST3//${WRAPPER_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/VST3//${WRAPPER_NAME}\"\n  fi\nfi\n\nif [[ \"${CONFIGURATION}\" == \"Release\" ]]; then\n  destinationPlugin=\"${HOME}/Library/Audio/Plug-Ins/VST3//$(basename \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"${HOME}/Library/Audio/Plug-Ins/VST3//${WRAPPER_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"${HOME}/Library/Audio/Plug-Ins/VST3//${WRAPPER_NAME}\"\n  fi\nfi\n";
+		};
+		BDF8D270026D8D094D7F38F4 /* Plugin Copy Step */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Plugin Copy Step";
+			alwaysOutOfDate = 1;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\n\nif [[ \"${CONFIGURATION}\" == \"Debug\" ]]; then\n  destinationPlugin=\"/Library/Application Support/Avid/Audio/Plug-Ins//$(basename \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"/Library/Application Support/Avid/Audio/Plug-Ins//${WRAPPER_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"/Library/Application Support/Avid/Audio/Plug-Ins//${WRAPPER_NAME}\"\n  fi\nfi\n\nif [[ \"${CONFIGURATION}\" == \"Release\" ]]; then\n  destinationPlugin=\"/Library/Application Support/Avid/Audio/Plug-Ins//$(basename \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\")\"\n  echo Running rm -rf \\\"${destinationPlugin}\\\"\n  rm -rf \"${destinationPlugin}\"\n  echo Running ditto \\\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\\\" \\\"${destinationPlugin}\\\"\n  ditto \"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\" \"${destinationPlugin}\"\n\n  if [[ -n \"${EXPANDED_CODE_SIGN_IDENTITY-}\" ]]; then\n    if [[ -n \"${CODE_SIGN_ENTITLEMENTS-}\" ]]; then\n      entitlementsArg=(--entitlements \"${CODE_SIGN_ENTITLEMENTS}\")\n    fi\n\n    echo Signing Identity: \\\"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\\\"\n    echo Running codesign --verbose=4 --force --sign \\\"${EXPANDED_CODE_SIGN_IDENTITY}\\\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \\\"/Library/Application Support/Avid/Audio/Plug-Ins//${WRAPPER_NAME}\\\"\n    codesign --verbose=4 --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" ${entitlementsArg[*]-} ${OTHER_CODE_SIGN_FLAGS-} \"/Library/Application Support/Avid/Audio/Plug-Ins//${WRAPPER_NAME}\"\n  fi\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28FE55AA5ED2C7EAD017143D = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729F48BE07267B2979E6B044,
+				EA2D8007243908D050C69957,
+				604D901995A89BBDDCE96367,
+				5C6DE51369E259D866FCBF0C,
+				78125C9B9F241D7C97343BD3,
+				36BD97A7ECF4B22DA02B2CB2,
+				49283F7E7B636836459DFEF8,
+				E55E1E8F0F7AF84C10D2444B,
+				DC426DE368AB7D13266AA9D9,
+				242043E4A16B08726CADC5E7,
+				E03A8D8B250049A0E497C39E,
+				EB92A49DA3E99FC2AD1412EB,
+				A86EF71BC538D25F5B3C5FB3,
+				6ECD8EA6BFE05EF0DEDD8F21,
+				31DC7BE80C9D728E69086E6A,
+				DAE2F0828F59A63F6EE3570E,
+				E5A65AD58AA457B049DF9FB3,
+				97B47A1FCFA09F4E2D6399D3,
+				8C550B79DFFCAA10E303D224,
+				18DE42E1DA2D7C3B19D94631,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB216E804DF6F7479233875 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCCCCCBE9B328F114AD5701,
+				B1FD3BCFF1E70E0AE9EE2CAB,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30E5D6B0DD284548CFE96948 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A297ABE017BAEF7FF29715F,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D9DEA1A5717C339C44169FE = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70E081507AAE57154140DD5,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AF38007EC23DB313CF8D0E7 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2183D1E358BA07CF9B9A257D,
+				EF483533D8115779EC2DFF14,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED39C84BD3105D67C974E99 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				295D55A182226E624D0A17C9,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		161BCB6A6E5897CB3F095D11 = {
+			isa = PBXTargetDependency;
+			target = F617F20A2456DC84FFCB0E84;
+		};
+		59BC7384B8A250736D82F5FE = {
+			isa = PBXTargetDependency;
+			target = 9F45C3AD2FCD5102449BD7C4;
+		};
+		654320DBD18A1128E9B9D0D9 = {
+			isa = PBXTargetDependency;
+			target = D07387405BD9F6FF805337BD;
+		};
+		6E1256327D0A68296F8F9136 = {
+			isa = PBXTargetDependency;
+			target = D07387405BD9F6FF805337BD;
+		};
+		8756BBE99EB2B8BF44760D73 = {
+			isa = PBXTargetDependency;
+			target = 14DAC6A601135726AB003F59;
+		};
+		8A95E5FDA9C6E8277A75FE14 = {
+			isa = PBXTargetDependency;
+			target = D07387405BD9F6FF805337BD;
+		};
+		8AAA12C4E12851BB306B0730 = {
+			isa = PBXTargetDependency;
+			target = D07387405BD9F6FF805337BD;
+		};
+		ABA75438B7C5B7C4E1C6C55B = {
+			isa = PBXTargetDependency;
+			target = D07387405BD9F6FF805337BD;
+		};
+		C157034FD1D912F5950CCA46 = {
+			isa = PBXTargetDependency;
+			target = 7C9F84A70F17A65F969C2FA6;
+		};
+		C1BE16F7377F2C584474FE8B = {
+			isa = PBXTargetDependency;
+			target = EC8FEF1E7D7B7AF9672A388D;
+		};
+		D4BFCF3982E70BA611D2E71A = {
+			isa = PBXTargetDependency;
+			target = 9F45C3AD2FCD5102449BD7C4;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BCF3360297C0B1D6AEA56E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-lTB303Distortion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+		3F0F125BB470DE3215E7E138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=1",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AAX.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "/Library/Application Support/Avid/Audio/Plug-Ins/";
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lTB303Distortion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				SEPARATE_STRIP = YES;
+				STRIPFLAGS = "-x";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = aaxplugin;
+			};
+			name = Release;
+		};
+		4B5EE8BD3E7B664C51928036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CODE_SIGN_FLAGS = --timestamp;
+				PRODUCT_NAME = "TB303Distortion";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		664442A730BB4AC37C93EFE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		718CF57994129775F7CE6F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CODE_SIGN_FLAGS = --timestamp;
+				PRODUCT_NAME = "TB303Distortion";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wreorder";
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		73167B63B878B1FF7CAF9E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=1",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AAX.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "/Library/Application Support/Avid/Audio/Plug-Ins/";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lTB303Distortion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = aaxplugin;
+			};
+			name = Debug;
+		};
+		8190AA576D789ED4ACF9D36D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lTB303Distortion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = Debug;
+		};
+		8D706C306F0B424C87A8FFB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AU.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lTB303Distortion";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = component;
+			};
+			name = Debug;
+		};
+		9454E18BA34AF3590F677423 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9ED5FFE91A2335CACE70E15F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=1",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_SHARED_CODE=1",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				SKIP_INSTALL = YES;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		9FA3D560F41E28D470A267EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3_Manifest_Helper.plist;
+				INFOPLIST_PREPROCESS = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "juce_vst3_helper";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+		A13531ECA50B6DAC5884EBA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3_Manifest_Helper.plist;
+				INFOPLIST_PREPROCESS = NO;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "juce_vst3_helper";
+				SEPARATE_STRIP = YES;
+				STRIPFLAGS = "-x";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		B73EFEE8D0168C58865E5F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-VST3.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lTB303Distortion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				SEPARATE_STRIP = YES;
+				STRIPFLAGS = "-x";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = Release;
+		};
+		BA2E589C94AB6DD1DDA9F0DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
+				INFOPLIST_PREPROCESS = NO;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-lTB303Distortion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				SEPARATE_STRIP = YES;
+				STRIPFLAGS = "-x";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Release;
+		};
+		BD8907EF0C9E2F37F1BF5F16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AU.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				OTHER_LDFLAGS = "-bundle -lTB303Distortion";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -d arm64_$arm64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				SEPARATE_STRIP = YES;
+				STRIPFLAGS = "-x";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = component;
+			};
+			name = Release;
+		};
+		DB1C5080002462FDE4F9DC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_ARCHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCE_PROJUCER_VERSION=0x8000a",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_USE_CURL=0",
+					"JUCE_LOAD_CURL_SYMBOLS_LAZILY=0",
+					"JUCE_CATCH_UNHANDLED_EXCEPTIONS=1",
+					"JUCE_ALLOW_STATIC_NULL_VARIABLES=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JUCE_WEB_BROWSER=0",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_AAX=1",
+					"JucePlugin_Build_Standalone=1",
+					"JucePlugin_Build_Unity=0",
+					"JucePlugin_Build_LV2=0",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Enable_ARA=0",
+					"JucePlugin_Name=\\\"TB303Distortion\\\"",
+					"JucePlugin_Desc=\\\"TB303Distortion\\\"",
+					"JucePlugin_Manufacturer=\\\"GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://github.com/GianaBrotherz\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"contact@gianabrotherz.com\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x5638616f",
+					"JucePlugin_IsSynth=0",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.0.0",
+					"JucePlugin_VersionCode=0x10000",
+					"JucePlugin_VersionString=\\\"1.0.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategEffect",
+					"JucePlugin_Vst3Category=\\\"Fx\\\"",
+					"JucePlugin_AUMainType=\\'aumf\\'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=TB303DistortionAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"TB303DistortionAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXIdentifier=com.GianaBrotherz.TB303Distortion",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=0",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x6175726d",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"GianaBrotherz:\\ TB303Distortion\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JucePlugin_ARAContentTypes=0",
+					"JucePlugin_ARATransformationFlags=0",
+					"JucePlugin_ARAFactoryID=\\\"com.GianaBrotherz.TB303Distortion.factory\\\"",
+					"JucePlugin_ARADocumentArchiveID=\\\"com.GianaBrotherz.TB303Distortion.aradocumentarchive.1.0.0\\\"",
+					"JucePlugin_ARACompatibleArchiveIDs=\\\"\\\"",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+					"JUCE_DISPLAY_SPLASH_SCREEN=0",
+					"JUCE_REPORT_APP_USAGE=0",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.0.0",
+					"JUCE_APP_VERSION_HEX=0x10000",
+					"JUCE_SHARED_CODE=1",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK",
+					"$(SRCROOT)/../../JuceLibraryCode",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF",
+					"$(SRCROOT)/../../JuceLibraryCode/modules",
+					"$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../JuceLibraryCode $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AAX/SDK/Interfaces/ACF $(SRCROOT)/../../JuceLibraryCode/modules $(SRCROOT)/../../JuceLibraryCode/modules/juce_audio_plugin_client/AU";
+				PRODUCT_BUNDLE_IDENTIFIER = com.GianaBrotherz.TB303Distortion;
+				PRODUCT_NAME = "TB303Distortion";
+				SKIP_INSTALL = YES;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30071ECB88A647346119DEF3 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BCF3360297C0B1D6AEA56E6,
+				BA2E589C94AB6DD1DDA9F0DD,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3822CDA4D49DC431E580ED5A = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D706C306F0B424C87A8FFB4,
+				BD8907EF0C9E2F37F1BF5F16,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		40388309ED8EE86A5D1DA1C6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73167B63B878B1FF7CAF9E07,
+				3F0F125BB470DE3215E7E138,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		442CA1313444E1591346FA42 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B5EE8BD3E7B664C51928036,
+				718CF57994129775F7CE6F97,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		44405404E0E195D5431F0706 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				664442A730BB4AC37C93EFE3,
+				9454E18BA34AF3590F677423,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6331390E10826D5DA4B6B7CE = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB1C5080002462FDE4F9DC65,
+				9ED5FFE91A2335CACE70E15F,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9299B6A1058600482F4E115B = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8190AA576D789ED4ACF9D36D,
+				B73EFEE8D0168C58865E5F5E,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A93FDDBBDD52FC052AC4B3AF = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FA3D560F41E28D470A267EE,
+				A13531ECA50B6DAC5884EBA9,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17BA55C4A17CB2E6EA8B2342 /* Project object */;
+}

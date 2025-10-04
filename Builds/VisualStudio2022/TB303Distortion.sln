@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio Version 17
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TB303Distortion - Standalone Plugin", "TB303Distortion_StandalonePlugin.vcxproj", "{C521D8A0-DCE9-71A2-EE2D-09CCC7E28599}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7FADE009-3F80-DD70-2C90-5D563110A8AD} = {7FADE009-3F80-DD70-2C90-5D563110A8AD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TB303Distortion - VST3", "TB303Distortion_VST3.vcxproj", "{93A3BF0B-12AB-1157-9E94-4A5267685D8A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7FADE009-3F80-DD70-2C90-5D563110A8AD} = {7FADE009-3F80-DD70-2C90-5D563110A8AD}
+		{76EF1097-E2B8-B829-7CE7-5CB2E4303487} = {76EF1097-E2B8-B829-7CE7-5CB2E4303487}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TB303Distortion - AAX", "TB303Distortion_AAX.vcxproj", "{AF3ABFD5-0A5F-2C0E-338A-9C694442FB0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7FADE009-3F80-DD70-2C90-5D563110A8AD} = {7FADE009-3F80-DD70-2C90-5D563110A8AD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TB303Distortion - Shared Code", "TB303Distortion_SharedCode.vcxproj", "{7FADE009-3F80-DD70-2C90-5D563110A8AD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TB303Distortion - VST3 Manifest Helper", "TB303Distortion_VST3ManifestHelper.vcxproj", "{76EF1097-E2B8-B829-7CE7-5CB2E4303487}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93A3BF0B-12AB-1157-9E94-4A5267685D8A}.Debug|x64.ActiveCfg = Debug|x64
+		{93A3BF0B-12AB-1157-9E94-4A5267685D8A}.Debug|x64.Build.0 = Debug|x64
+		{93A3BF0B-12AB-1157-9E94-4A5267685D8A}.Release|x64.ActiveCfg = Release|x64
+		{93A3BF0B-12AB-1157-9E94-4A5267685D8A}.Release|x64.Build.0 = Release|x64
+		{AF3ABFD5-0A5F-2C0E-338A-9C694442FB0D}.Debug|x64.ActiveCfg = Debug|x64
+		{AF3ABFD5-0A5F-2C0E-338A-9C694442FB0D}.Debug|x64.Build.0 = Debug|x64
+		{AF3ABFD5-0A5F-2C0E-338A-9C694442FB0D}.Release|x64.ActiveCfg = Release|x64
+		{AF3ABFD5-0A5F-2C0E-338A-9C694442FB0D}.Release|x64.Build.0 = Release|x64
+		{C521D8A0-DCE9-71A2-EE2D-09CCC7E28599}.Debug|x64.ActiveCfg = Debug|x64
+		{C521D8A0-DCE9-71A2-EE2D-09CCC7E28599}.Debug|x64.Build.0 = Debug|x64
+		{C521D8A0-DCE9-71A2-EE2D-09CCC7E28599}.Release|x64.ActiveCfg = Release|x64
+		{C521D8A0-DCE9-71A2-EE2D-09CCC7E28599}.Release|x64.Build.0 = Release|x64
+		{7FADE009-3F80-DD70-2C90-5D563110A8AD}.Debug|x64.ActiveCfg = Debug|x64
+		{7FADE009-3F80-DD70-2C90-5D563110A8AD}.Debug|x64.Build.0 = Debug|x64
+		{7FADE009-3F80-DD70-2C90-5D563110A8AD}.Release|x64.ActiveCfg = Release|x64
+		{7FADE009-3F80-DD70-2C90-5D563110A8AD}.Release|x64.Build.0 = Release|x64
+		{76EF1097-E2B8-B829-7CE7-5CB2E4303487}.Debug|x64.ActiveCfg = Debug|x64
+		{76EF1097-E2B8-B829-7CE7-5CB2E4303487}.Debug|x64.Build.0 = Debug|x64
+		{76EF1097-E2B8-B829-7CE7-5CB2E4303487}.Release|x64.ActiveCfg = Release|x64
+		{76EF1097-E2B8-B829-7CE7-5CB2E4303487}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

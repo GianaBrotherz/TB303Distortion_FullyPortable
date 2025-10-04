@@ -1,0 +1,176 @@
+name: Build TB303 Distortion for All Platforms
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+    
+    - name: Generate Windows Project
+      run: |
+        # Download Projucer if needed
+        Invoke-WebRequest -Uri "https://github.com/juce-framework/JUCE/releases/download/7.0.12/juce-7.0.12-windows.zip" -OutFile "juce.zip"
+        Expand-Archive -Path "juce.zip" -DestinationPath "."
+        .\JUCE\Projucer.exe --resave TB303Distortion_Portable.jucer
+    
+    - name: Build Windows VST3
+      run: |
+        cd Builds\VisualStudio2022
+        msbuild TB303Distortion.sln /p:Configuration=Release /p:Platform=x64 /maxcpucount
+    
+    - name: Upload Windows VST3
+      uses: actions/upload-artifact@v4
+      with:
+        name: TB303Distortion-Windows-VST3
+        path: Builds/VisualStudio2022/x64/Release/VST3/TB303Distortion.vst3
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Generate macOS Project
+      run: |
+        # Download Projucer
+        curl -L -o juce.zip https://github.com/juce-framework/JUCE/releases/download/7.0.12/juce-7.0.12-osx.zip
+        unzip juce.zip
+        chmod +x JUCE/Projucer.app/Contents/MacOS/Projucer
+        JUCE/Projucer.app/Contents/MacOS/Projucer --resave TB303Distortion_Portable.jucer
+    
+    - name: Build macOS VST3 and AU
+      run: |
+        cd Builds/MacOSX
+        xcodebuild -project TB303Distortion.xcodeproj -scheme "TB303Distortion - All" -configuration Release ARCHS="arm64 x86_64" VALID_ARCHS="arm64 x86_64" clean build
+    
+    - name: Upload macOS VST3
+      uses: actions/upload-artifact@v4
+      with:
+        name: TB303Distortion-macOS-VST3
+        path: Builds/MacOSX/build/Release/TB303Distortion.vst3
+        
+    - name: Upload macOS AU
+      uses: actions/upload-artifact@v4
+      with:
+        name: TB303Distortion-macOS-AU
+        path: Builds/MacOSX/build/Release/TB303Distortion.component
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential libasound2-dev libjack-jackd2-dev \
+                            libfreetype6-dev libx11-dev libxcomposite-dev \
+                            libxcursor-dev libxext-dev libxinerama-dev \
+                            libxrandr-dev libxrender-dev libwebkit2gtk-4.0-dev \
+                            libglu1-mesa-dev mesa-common-dev
+    
+    - name: Generate Linux Project
+      run: |
+        # Download Projucer
+        curl -L -o juce.zip https://github.com/juce-framework/JUCE/releases/download/7.0.12/juce-7.0.12-linux.zip
+        unzip juce.zip
+        chmod +x JUCE/Projucer
+        JUCE/Projucer --resave TB303Distortion_Portable.jucer
+    
+    - name: Build Linux VST3
+      run: |
+        cd Builds/LinuxMakefile
+        make CONFIG=Release -j$(nproc)
+    
+    - name: Upload Linux VST3
+      uses: actions/upload-artifact@v4
+      with:
+        name: TB303Distortion-Linux-VST3
+        path: Builds/LinuxMakefile/build/TB303Distortion.vst3
+
+  create-release:
+    needs: [build-windows, build-macos, build-linux]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ github.run_number }}
+        release_name: TB303 Distortion v${{ github.run_number }}
+        body: |
+          🎵 TB303 Distortion Plugin - Cross-Platform Release
+          
+          ## 📦 Downloads:
+          - **Windows**: TB303Distortion.vst3 (for Bitwig, Cubase, etc.)
+          - **macOS**: TB303Distortion.vst3 + TB303Distortion.component (VST3 + AU)
+          - **Linux**: TB303Distortion.vst3 (for Bitwig, Reaper, etc.)
+          
+          ## ✨ Features:
+          - Animated Acid Smiley (morphs with distortion)
+          - TB-303 Style Distortion Effect
+          - Embedded Resources (no external files needed)
+          - MIDI Parameter Automation
+          
+          ## 📥 Installation:
+          - **Windows**: Copy .vst3 to `C:\Program Files\Common Files\VST3\`
+          - **macOS**: Copy .vst3 to `~/Library/Audio/Plug-Ins/VST3/` and .component to `~/Library/Audio/Plug-Ins/Components/`
+          - **Linux**: Copy .vst3 to `~/.vst3/` or `/usr/lib/vst3/`
+        draft: false
+        prerelease: false
+        
+    - name: Upload Windows VST3
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: TB303Distortion-Windows-VST3/TB303Distortion.vst3
+        asset_name: TB303Distortion-Windows.vst3
+        asset_content_type: application/octet-stream
+        
+    - name: Upload macOS VST3
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: TB303Distortion-macOS-VST3/TB303Distortion.vst3
+        asset_name: TB303Distortion-macOS-VST3.zip
+        asset_content_type: application/zip
+        
+    - name: Upload macOS AU
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: TB303Distortion-macOS-AU/TB303Distortion.component
+        asset_name: TB303Distortion-macOS-AU.zip
+        asset_content_type: application/zip
+        
+    - name: Upload Linux VST3
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: TB303Distortion-Linux-VST3/TB303Distortion.vst3
+        asset_name: TB303Distortion-Linux.vst3
+        asset_content_type: application/octet-stream

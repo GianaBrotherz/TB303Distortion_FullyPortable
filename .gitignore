@@ -1,0 +1,29 @@
+# Build outputs
+Builds/*/build/
+Builds/*/x64/
+Builds/*/Debug/
+Builds/*/Release/
+*.o
+*.obj
+*.exe
+*.dll
+
+# IDE files
+.vscode/
+.vs/
+*.xcworkspace/
+*.xcuserdata/
+*.suo
+*.user
+
+# macOS
+.DS_Store
+Icon?
+
+# JuceLibraryCode (generated)
+JuceLibraryCode/
+
+# Temporary files
+*.tmp
+*.temp
+*~
