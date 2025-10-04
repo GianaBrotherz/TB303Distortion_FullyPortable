@@ -26,6 +26,7 @@ jobs:
       with:
         name: TB303Distortion-Windows-VST3
         path: Builds/VisualStudio2022/x64/Release/VST3/TB303Distortion.vst3
+        if-no-files-found: error
 
   build-macos:
     runs-on: macos-latest
@@ -42,12 +43,14 @@ jobs:
       with:
         name: TB303Distortion-macOS-VST3
         path: Builds/MacOSX/build/Release/TB303Distortion.vst3
+        if-no-files-found: error
         
     - name: Upload macOS AU
       uses: actions/upload-artifact@v4
       with:
         name: TB303Distortion-macOS-AU
         path: Builds/MacOSX/build/Release/TB303Distortion.component
+        if-no-files-found: error
 
   build-linux:
     runs-on: ubuntu-latest
@@ -73,6 +76,7 @@ jobs:
       with:
         name: TB303Distortion-Linux-VST3
         path: Builds/LinuxMakefile/build/TB303Distortion.vst3
+        if-no-files-found: error
 
   create-release:
     needs: [build-windows, build-macos, build-linux]
@@ -83,21 +87,31 @@ jobs:
     - name: Download all artifacts
       uses: actions/download-artifact@v4
       
+    - name: Prepare release assets
+      run: |
+        # Create zip files for macOS assets
+        cd TB303Distortion-macOS-VST3
+        zip -r ../TB303Distortion-macOS-VST3.zip TB303Distortion.vst3
+        cd ../TB303Distortion-macOS-AU
+        zip -r ../TB303Distortion-macOS-AU.zip TB303Distortion.component
+        cd ..
+        
+        # Copy Windows and Linux assets
+        cp TB303Distortion-Windows-VST3/TB303Distortion.vst3 TB303Distortion-Windows.vst3
+        cp TB303Distortion-Linux-VST3/TB303Distortion.vst3 TB303Distortion-Linux.vst3
+      
     - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: v${{ github.run_number }}
-        release_name: TB303 Distortion v${{ github.run_number }}
+        name: TB303 Distortion v${{ github.run_number }}
         body: |
           🎵 TB303 Distortion Plugin - Cross-Platform Release
           
           ## 📦 Downloads:
-          - **Windows**: TB303Distortion.vst3 (for Bitwig, Cubase, etc.)
-          - **macOS**: TB303Distortion.vst3 + TB303Distortion.component (VST3 + AU)
-          - **Linux**: TB303Distortion.vst3 (for Bitwig, Reaper, etc.)
+          - **Windows**: TB303Distortion-Windows.vst3 (for Bitwig, Cubase, etc.)
+          - **macOS**: TB303Distortion-macOS-VST3.zip + TB303Distortion-macOS-AU.zip (VST3 + AU)
+          - **Linux**: TB303Distortion-Linux.vst3 (for Bitwig, Reaper, etc.)
           
           ## ✨ Features:
           - Animated Acid Smiley (morphs with distortion)
@@ -109,45 +123,10 @@ jobs:
           - **Windows**: Copy .vst3 to `C:\Program Files\Common Files\VST3\`
           - **macOS**: Copy .vst3 to `~/Library/Audio/Plug-Ins/VST3/` and .component to `~/Library/Audio/Plug-Ins/Components/`
           - **Linux**: Copy .vst3 to `~/.vst3/` or `/usr/lib/vst3/`
+        files: |
+          TB303Distortion-Windows.vst3
+          TB303Distortion-macOS-VST3.zip
+          TB303Distortion-macOS-AU.zip
+          TB303Distortion-Linux.vst3
         draft: false
         prerelease: false
-        
-    - name: Upload Windows VST3
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: TB303Distortion-Windows-VST3/TB303Distortion.vst3
-        asset_name: TB303Distortion-Windows.vst3
-        asset_content_type: application/octet-stream
-        
-    - name: Upload macOS VST3
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: TB303Distortion-macOS-VST3/TB303Distortion.vst3
-        asset_name: TB303Distortion-macOS-VST3.zip
-        asset_content_type: application/zip
-        
-    - name: Upload macOS AU
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: TB303Distortion-macOS-AU/TB303Distortion.component
-        asset_name: TB303Distortion-macOS-AU.zip
-        asset_content_type: application/zip
-        
-    - name: Upload Linux VST3
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: TB303Distortion-Linux-VST3/TB303Distortion.vst3
-        asset_name: TB303Distortion-Linux.vst3
-        asset_content_type: application/octet-stream
