@@ -19,13 +19,13 @@ jobs:
     - name: Build Windows VST3
       run: |
         cd Builds\VisualStudio2022
-        msbuild TB303Distortion.sln /p:Configuration=Release /p:Platform=x64 /maxcpucount
+        msbuild TB303Distortion_VST3.vcxproj /p:Configuration=Release /p:Platform=x64 /maxcpucount
     
     - name: Upload Windows VST3
       uses: actions/upload-artifact@v4
       with:
         name: TB303Distortion-Windows-VST3
-        path: Builds/VisualStudio2022/x64/Release/VST3/TB303Distortion.vst3
+        path: Builds/VisualStudio2022/x64/Release/VST3/
         if-no-files-found: error
 
   build-macos:
@@ -36,7 +36,8 @@ jobs:
     - name: Build macOS VST3 and AU
       run: |
         cd Builds/MacOSX
-        xcodebuild -project TB303Distortion.xcodeproj -scheme "TB303Distortion - All" -configuration Release ARCHS="arm64 x86_64" VALID_ARCHS="arm64 x86_64" clean build
+        xcodebuild -project TB303Distortion.xcodeproj -scheme "TB303Distortion - VST3" -configuration Release ARCHS="arm64 x86_64" VALID_ARCHS="arm64 x86_64" clean build
+        xcodebuild -project TB303Distortion.xcodeproj -scheme "TB303Distortion - AU" -configuration Release ARCHS="arm64 x86_64" VALID_ARCHS="arm64 x86_64" build
     
     - name: Upload macOS VST3
       uses: actions/upload-artifact@v4
@@ -69,13 +70,13 @@ jobs:
     - name: Build Linux VST3
       run: |
         cd Builds/LinuxMakefile
-        make CONFIG=Release -j$(nproc)
+        make CONFIG=Release TARGET=VST3 -j$(nproc)
     
     - name: Upload Linux VST3
       uses: actions/upload-artifact@v4
       with:
         name: TB303Distortion-Linux-VST3
-        path: Builds/LinuxMakefile/build/TB303Distortion.vst3
+        path: Builds/LinuxMakefile/build/
         if-no-files-found: error
 
   create-release:
@@ -97,8 +98,8 @@ jobs:
         cd ..
         
         # Copy Windows and Linux assets
-        cp TB303Distortion-Windows-VST3/TB303Distortion.vst3 TB303Distortion-Windows.vst3
-        cp TB303Distortion-Linux-VST3/TB303Distortion.vst3 TB303Distortion-Linux.vst3
+        cp TB303Distortion-Windows-VST3/*.vst3 TB303Distortion-Windows.vst3 2>/dev/null || echo "Windows VST3 not found"
+        cp TB303Distortion-Linux-VST3/*.vst3 TB303Distortion-Linux.vst3 2>/dev/null || echo "Linux VST3 not found"
       
     - name: Create Release
       uses: softprops/action-gh-release@v2
