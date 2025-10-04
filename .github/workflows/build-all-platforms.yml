@@ -16,13 +16,6 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.1
     
-    - name: Generate Windows Project
-      run: |
-        # Download Projucer if needed
-        Invoke-WebRequest -Uri "https://github.com/juce-framework/JUCE/releases/download/7.0.12/juce-7.0.12-windows.zip" -OutFile "juce.zip"
-        Expand-Archive -Path "juce.zip" -DestinationPath "."
-        .\JUCE\Projucer.exe --resave TB303Distortion_Portable.jucer
-    
     - name: Build Windows VST3
       run: |
         cd Builds\VisualStudio2022
@@ -38,14 +31,6 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Generate macOS Project
-      run: |
-        # Download Projucer
-        curl -L -o juce.zip https://github.com/juce-framework/JUCE/releases/download/7.0.12/juce-7.0.12-osx.zip
-        unzip juce.zip
-        chmod +x JUCE/Projucer.app/Contents/MacOS/Projucer
-        JUCE/Projucer.app/Contents/MacOS/Projucer --resave TB303Distortion_Portable.jucer
     
     - name: Build macOS VST3 and AU
       run: |
@@ -77,14 +62,6 @@ jobs:
                             libxcursor-dev libxext-dev libxinerama-dev \
                             libxrandr-dev libxrender-dev libwebkit2gtk-4.0-dev \
                             libglu1-mesa-dev mesa-common-dev
-    
-    - name: Generate Linux Project
-      run: |
-        # Download Projucer
-        curl -L -o juce.zip https://github.com/juce-framework/JUCE/releases/download/7.0.12/juce-7.0.12-linux.zip
-        unzip juce.zip
-        chmod +x JUCE/Projucer
-        JUCE/Projucer --resave TB303Distortion_Portable.jucer
     
     - name: Build Linux VST3
       run: |
