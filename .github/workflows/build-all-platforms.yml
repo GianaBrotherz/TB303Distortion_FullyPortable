@@ -15,18 +15,6 @@ jobs:
     
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.1
-      
-    - name: Create JuceLibraryCode symlinks (Windows)
-      run: |
-        mkdir JuceLibraryCode
-        mklink /J JuceLibraryCode\modules JUCE\modules
-        
-        echo #include "../JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp" > JuceLibraryCode\include_juce_audio_plugin_client_VST3.cpp
-        echo #include "../JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp" > JuceLibraryCode\include_juce_audio_plugin_client_Standalone.cpp
-        
-        echo namespace BinaryData {} > JuceLibraryCode\BinaryData.cpp
-        echo #pragma once > JuceLibraryCode\BinaryData.h
-        echo namespace BinaryData {} >> JuceLibraryCode\BinaryData.h
     
     - name: Build Windows VST3
       run: |
@@ -46,17 +34,6 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Create JuceLibraryCode symlinks (macOS)
-      run: |
-        mkdir -p JuceLibraryCode
-        ln -sf ../JUCE/modules JuceLibraryCode/modules
-        
-        echo '#include "../JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp"' > JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp
-        echo '#include "../JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp"' > JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp
-        
-        echo 'namespace BinaryData {}' > JuceLibraryCode/BinaryData.cpp
-        printf '#pragma once\nnamespace BinaryData {}' > JuceLibraryCode/BinaryData.h
     
     - name: Build macOS VST3 and AU
       run: |
@@ -90,20 +67,8 @@ jobs:
                             libfreetype6-dev libx11-dev libxcomposite-dev \
                             libxcursor-dev libxext-dev libxinerama-dev \
                             libxrandr-dev libxrender-dev libwebkit2gtk-4.0-dev \
-                            libglu1-mesa-dev mesa-common-dev
-                            
-    - name: Create JuceLibraryCode symlinks
-      run: |
-        mkdir -p JuceLibraryCode
-        ln -sf ../JUCE/modules JuceLibraryCode/modules
-        
-        # Create include files for VST3 and Standalone
-        echo '#include "../JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp"' > JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp
-        echo '#include "../JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp"' > JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp
-        
-        # Create minimal BinaryData files
-        echo 'namespace BinaryData {}' > JuceLibraryCode/BinaryData.cpp
-        echo '#pragma once\nnamespace BinaryData {}' > JuceLibraryCode/BinaryData.h
+                            libglu1-mesa-dev mesa-common-dev libxrandr-dev \
+                            libxss-dev libgtk-3-dev
     
     - name: Build Linux VST3
       run: |
